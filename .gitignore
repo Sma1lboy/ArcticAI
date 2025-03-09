@@ -9,7 +9,6 @@ pnpm-debug.log*
 # Build outputs
 dist/
 build/
-lib/
 *.tsbuildinfo
 
 # Environment and secret files
