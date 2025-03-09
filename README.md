@@ -1,5 +1,6 @@
 # ArcticAI
 
+![alt text](image.png)
 A TypeScript framework for building flexible multi-agent systems using modern LLMs (Large Language Models).
 
 ## Features
