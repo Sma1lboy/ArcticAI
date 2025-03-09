@@ -1,5 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
+import { Github } from "lucide-react";
 import { useState, useEffect } from "react";
 
 export default function Home() {
@@ -34,10 +35,8 @@ export default function Home() {
             <h1 className="text-4xl md:text-5xl font-extralight tracking-wider text-white">
               Arctic AI
             </h1>
-
             <div className="space-y-4">
               <p className="text-lg font-light text-slate-300">Coming Soon</p>
-
               <p className="text-sm text-slate-500">Multi-agent AI framework</p>
             </div>
           </header>
@@ -70,7 +69,16 @@ export default function Home() {
             </form>
           )}
 
-          <footer>
+          <footer className="space-y-4">
+            <a
+              href="https://github.com/Sma1lboy/ArcticAI"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-slate-500 hover:text-slate-300 transition-colors"
+            >
+              <Github size={18} className="mr-2" />
+              <span className="text-sm">GitHub</span>
+            </a>
             <p className="text-xs text-slate-600">© 2025 Arctic AI</p>
           </footer>
         </div>
