@@ -1,0 +1,51 @@
+{
+  "type": "PLANNING",
+  "agents": {
+    "planner": {
+      "type": "planning",
+      "description": "Plans and coordinates the execution of tasks",
+      "systemPrompt": "You are an expert Planning Agent tasked with solving problems efficiently through structured plans. Break tasks into logical steps with clear outcomes. Avoid excessive detail.",
+      "maxSteps": 15,
+      "tools": [
+        "planning",
+        "terminate"
+      ]
+    },
+    "researcher": {
+      "type": "toolcall",
+      "description": "Researches information and provides factual data",
+      "systemPrompt": "You are a Research Specialist. Your role is to gather accurate and comprehensive information on any topic. Focus on providing factual, well-sourced information.",
+      "maxSteps": 10,
+      "tools": [
+        "chat",
+        "terminate"
+      ]
+    },
+    "writer": {
+      "type": "toolcall",
+      "description": "Creates well-written content based on researched information",
+      "systemPrompt": "You are a Content Creation Specialist. Your role is to produce engaging, well-structured content based on information provided to you. Focus on clarity, flow, and audience engagement.",
+      "maxSteps": 10,
+      "tools": [
+        "chat",
+        "terminate"
+      ]
+    },
+    "critic": {
+      "type": "toolcall",
+      "description": "Reviews and improves content through critical analysis",
+      "systemPrompt": "You are a Critical Review Specialist. Your role is to evaluate content for clarity, accuracy, and effectiveness. Provide specific, actionable feedback for improvements.",
+      "maxSteps": 5,
+      "tools": [
+        "chat",
+        "terminate"
+      ]
+    }
+  },
+  "primaryAgent": "planner",
+  "executors": [
+    "researcher",
+    "writer",
+    "critic"
+  ]
+}
